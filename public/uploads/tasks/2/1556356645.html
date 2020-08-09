@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<div>
+
+<input type="number" id="num1" value="0" name="num1"> <p id="demo"></p>
+
+<button onclick="myplus()">+</button>
+
+<button onclick="myneg()">-</button>
+
+</div>
+
+<script>
+
+function myneg(){
+
+if(document.getElementById("num1").value>0){
+
+document.getElementById("num1").stepDown(1);
+
+document.getElementById("demo").innerHTML = Date();
+
+}
+
+}
+
+function myplus(){
+
+document.getElementById("num1").stepUp(1);
+
+document.getElementById("demo").innerHTML = Date();
+
+}
+
+</script>
+
+<div>
+
+<input type="number" id="num2" value="0" name="num2"> <p id="demo"></p>
+
+<button onclick="waaar()">+</button>
+
+<button onclick="waaar()">-</button>
+
+</div>
+<script>
+
+function waaar(){
+
+if(document.getElementById("num2").value>0){
+
+document.getElementById("num2").stepDown(1);
+
+document.getElementById("demo").innerHTML = Date();
+
+}
+
+}
+
+function waaar(){
+
+document.getElementById("num2").stepUp(1);
+
+document.getElementById("demo").innerHTML = Date();
+
+}
+
+</script>
+	<div>
+
+<input type="number" id="num3" value="0" name="num3"> <p id="demo"></p>
+
+<button onclick="kal()">+</button>
+
+<button onclick="kal()">-</button>
+
+</div>
+
+	<script>
+
+function kal(){
+
+if(document.getElementById("num3").value>0){
+
+document.getElementById("num3").stepDown(1);
+
+document.getElementById("demo").innerHTML = Date();
+
+}
+
+}
+
+function kal(){
+
+document.getElementById("num3").stepUp(1);
+
+document.getElementById("demo").innerHTML = Date();
+
+}
+
+</script>
+	
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+	
+	#time{
+		
+		display: table;
+		margin: 200px auto;
+		text-align: center;
+		
+		
+	}
+	
+	#time li{
+		
+		
+		float: left;
+		display: inline-block;
+		background: #120C0C;
+		border: 3px solid #EFE7E8;
+		padding: 30px;
+		font-size: 30px;
+		color: aliceblue;
+	}
+	
+</style>
+</head>
+
+<body>
+     <ul id="time">
+      
+       <li id="h"></li>
+       <li id="m"></li>
+       <li id="s"></li>
+       <li id="t"></li>
+       
+      </ul> 
+      
+      <script>
+	
+		  var h=document.getElementById("h"),
+			  m=document.getElementById("m"),
+			  s=document.getElementById("s"),
+			  t=document.getElementById("t"),
+			  type="Am";
+		  mytime();
+		  function mytime(){
+			  
+			  "use script";
+			  var time=new Date();
+			    hours=time.getHours(),
+			   Minutes=time.getMinutes(),
+			    Seconds=time.getSeconds();
+			 
+			  if(hours>12){
+				  
+				  type="pm";
+				  hours-=12;
+			  }
+			  if(hours<10){
+				  
+				  hours="0"+hours;
+				  
+			  }
+			   if(Minutes<10){
+				  
+				  Minutes="0"+Minutes;
+				  
+			  } 
+			  
+			  if(Seconds<10){
+				  
+				  Seconds="0"+Seconds;
+				  
+			  }
+			     h.innerText=hours;
+			    m.innerText=Minutes;
+			   s.innerText=Seconds;
+			  t.innerText=type;
+			  setTimeout(mytime,1000);
+			  
+			  console.log(hours);
+		  }
+	</script>
+</body>
+</html>
